@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Rom
+ * @package     Rom_AdminIpRestriction
+ * @copyright   Copyright (c) 2015 ROM - Agence de communication (http://www.rom.fr/)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author      André Herrn <info@andre-herrn.de>
+ */
+-->
+<config>
+    <modules>
+        <Rom_AdminIpRestriction>
+            <version>0.1.0</version>
+        </Rom_AdminIpRestriction>
+    </modules>
+    <global>
+        <models>
+           <romadminiprestriction>
+               <class>Rom_AdminIpRestriction_Model</class>
+            </romadminiprestriction>
+        </models>
+        <events>
+            <admin_session_user_login_success>
+                <observers>
+                    <romadminiprestriction_check_login>
+                        <class>romadminiprestriction/observer</class>
+                        <method>checkLogin</method>
+                    </romadminiprestriction_check_login>
+                </observers>
+            </admin_session_user_login_success>
+        </events>
+    </global>
+</config>

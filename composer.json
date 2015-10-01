@@ -1,0 +1,14 @@
+{
+  "name": "rom/admin-ip-restriction",
+  "license": ["OSL-3.0"],
+  "type": "magento-module",
+  "description": "This extension allows to restrict admin backend access of Magento by IP.",
+  "homepage": "https://github.com/romfr/admin-ip-restriction",
+  "authors":[{
+    "name": "André Herrn",
+    "email": "info@andre-herrn.de"
+  }],
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*"
+  }
+}
